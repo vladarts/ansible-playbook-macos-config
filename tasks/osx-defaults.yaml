@@ -5,3 +5,7 @@
 - name: Bottom-Left Corner -> Screen Saver
   osx_defaults: domain=com.apple.dock key={{ item.name }} type=int value={{ item.value }}
   loop: [{ name: wvous-bl-corner, value: 5 }, { name: wvous-bl-modifier, value: 0 }]
+
+- name: Require password immediately after sleep or screen saver
+  osx_defaults: domain=com.apple.screensaver key={{ item.name }} type=int value={{ item.value }}
+  loop: [{ name: askForPassword, value: 1 }, { name: askForPasswordDelay, value: 5 }]
