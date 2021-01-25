@@ -41,6 +41,8 @@
     brew_present_casks: []
     brew_absent_casks: []
   tasks:
+    - include: tasks/osx-defaults.yaml
+      tags: [ osx_defaults ]
     - include: tasks/applications.yaml
       tags: [ applications ]
     - include: tasks/mas.yaml

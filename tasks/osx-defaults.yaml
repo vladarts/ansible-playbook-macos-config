@@ -1,0 +1,7 @@
+#: macos
+- name: Disable auto-correct
+  osx_defaults: key=NSAutomaticSpellingCorrectionEnabled type=bool value=false
+
+- name: Bottom-Left Corner -> Screen Saver
+  osx_defaults: domain=com.apple.dock key={{ item.name }} type=int value={{ item.value }}
+  loop: [{ name: wvous-bl-corner, value: 5 }, { name: wvous-bl-modifier, value: 0 }]
