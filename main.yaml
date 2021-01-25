@@ -1,0 +1,48 @@
+---
+- name: Configure macOS
+  hosts: localhost
+  vars:
+    mas_installed_apps:
+      - { name: ClipboardHistory, id: 420939835 }
+      - { name: WhatsApp, id: 1147396723 }
+      - { name: Slack, id: 803453959 }
+      - { name: PixelmatorPro, id: 1289583905 }
+    brew_present_taps:
+      - homebrew/cask
+      - homebrew/cask-versions
+      - blendle/blendle
+      - dtan4/dtan4
+    brew_absent_taps: []
+    brew_present_packages:
+      - vault
+      - kns
+      - git
+      - bash-completion
+      - python3
+      - htop
+      - pyenv
+      - mc
+      - curl
+      - ffmpeg
+      - watch
+      - k8stail
+      - wget
+      - youtube-dl
+      - imagemagick
+      - terraform
+      - jq
+      - yq
+      - wakeonlan
+      - go
+      - kubectl
+      - helm
+      - awscli
+    brew_absent_packages: []
+    brew_present_casks: []
+    brew_absent_casks: []
+  tasks:
+    - include: tasks/applications.yaml
+      tags: [ applications ]
+    - include: tasks/mas.yaml
+      tags: [ applications, mas ]
+...

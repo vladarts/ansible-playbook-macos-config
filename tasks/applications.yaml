@@ -1,0 +1,45 @@
+---
+#
+# Taps
+#
+- name: Brew absent taps
+  homebrew_tap:
+    name: '{{ item }}'
+    state: absent
+  loop: '{{ brew_absent_taps }}'
+- name: Brew present taps
+  homebrew_tap:
+    name: '{{ item }}'
+    state: present
+  loop: '{{ brew_present_taps }}'
+
+#
+# Packages
+#
+- name: Brew absent packages
+  homebrew:
+    name: '{{ item }}'
+    state: absent
+  loop: '{{ brew_absent_packages }}'
+
+- name: Brew present packages
+  homebrew:
+    name: '{{ item }}'
+    state: present
+  loop: '{{ brew_present_packages }}'
+
+#
+# Casks
+#
+- name: Brew absent casks
+  homebrew_cask:
+    name: '{{ item }}'
+    state: absent
+  loop: '{{ brew_absent_casks }}'
+
+- name: Brew present casks
+  homebrew_cask:
+    name: '{{ item }}'
+    state: present
+  loop: '{{ brew_present_casks }}'
+...
