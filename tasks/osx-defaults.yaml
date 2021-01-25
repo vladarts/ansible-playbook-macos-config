@@ -9,3 +9,9 @@
 - name: Require password immediately after sleep or screen saver
   osx_defaults: domain=com.apple.screensaver key={{ item.name }} type=int value={{ item.value }}
   loop: [{ name: askForPassword, value: 1 }, { name: askForPasswordDelay, value: 5 }]
+
+- name: Resize the Dock
+  osx_defaults: domain=com.apple.dock key=com.apple.dock type=int value=25
+
+- name: Hide the Dock
+  osx_defaults: domain=com.apple.dock key=autohide type=bool value=true
