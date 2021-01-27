@@ -37,6 +37,7 @@
       - kubectl
       - helm
       - awscli
+      - jsonnet
     brew_absent_packages: []
     brew_present_casks: []
     brew_absent_casks: []
