@@ -33,7 +33,7 @@ Clone the repository:
 .. code-block:: bash
 
   mkdir -p ${HOME}/dev/github.com/xxxbobrxxx/ansible-playbook-macos-config
-  git clone git@github.com:xxxbobrxxx/system_config.git ${HOME}/dev/github.com/xxxbobrxxx/ansible-playbook-macos-config
+  git clone git@github.com:xxxbobrxxx/ansible-playbook-macos-config.git ${HOME}/dev/github.com/xxxbobrxxx/ansible-playbook-macos-config
 
 Run the playbook:
 
