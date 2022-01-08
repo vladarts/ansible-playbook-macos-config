@@ -53,4 +53,26 @@
       tags: [ applications ]
     - include: tasks/mas.yaml
       tags: [ applications, mas ]
+
+    - name: Python system requirements
+      tags: [ python ]
+      pip:
+        executable: pip3
+        name:
+          - virtualenv
+          - virtualenvwrapper
+    - name: vp global environment
+      tags: [ python ]
+      command:
+        cmd: virtualenv ~/.virtualenvs/vp --python=/usr/local/bin/python3
+        creates: "~/.virtualenvs/vp"
+
+    - name: System configuration directory
+      file:
+        path: ~/dev/github.com/xxxbobrxxx/system_config
+        state: directory
+    - name: System configuration clone
+      git:
+        repo: git@github.com:xxxbobrxxx/system_config.git
+        dest: ~/dev/github.com/xxxbobrxxx/system_config
 ...
