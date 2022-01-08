@@ -66,6 +66,14 @@
       command:
         cmd: virtualenv ~/.virtualenvs/vp --python=/usr/local/bin/python3
         creates: "~/.virtualenvs/vp"
+    - name: vp global environment requirements
+      tags: [ python ]
+      pip:
+        executable: ~/.virtualenvs/vp/bin/pip
+        name:
+          - python-gitlab
+          - giturlparse
+          - pyyaml
 
     - name: System configuration directory
       file:
