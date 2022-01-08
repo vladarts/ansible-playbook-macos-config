@@ -47,11 +47,11 @@
     brew_present_casks: []
     brew_absent_casks: []
   tasks:
-    - include: tasks/osx-defaults.yaml
+    - include_tasks: tasks/osx-defaults.yaml
       tags: [ osx_defaults ]
-    - include: tasks/applications.yaml
+    - include_tasks: tasks/applications.yaml
       tags: [ applications ]
-    - include: tasks/mas.yaml
+    - include_tasks: tasks/mas.yaml
       tags: [ applications, mas ]
 
     - name: Python system requirements
@@ -75,4 +75,7 @@
       git:
         repo: git@github.com:xxxbobrxxx/system_config.git
         dest: ~/dev/github.com/xxxbobrxxx/system_config
+    - name: Global ignore file
+      command:
+        cmd: git config --global core.excludesfile ~/dev/github.com/xxxbobrxxx/system_config/bashrc/ignore
 ...
