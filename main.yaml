@@ -3,10 +3,15 @@
   hosts: localhost
   vars:
     mas_installed_apps:
-      - { name: ClipboardHistory, id: 420939835 }
-      - { name: WhatsApp, id: 1147396723 }
-      - { name: Slack, id: 803453959 }
-      - { name: PixelmatorPro, id: 1289583905 }
+      #: TODO: Install manually from AppStore
+      # - name: ClipboardHistory
+      #   id: 420939835
+      - name: WhatsApp
+        id: 1147396723
+      - name: Slack
+        id: 803453959
+      - name: PixelmatorPro
+        id: 1289583905
     brew_present_taps:
       - homebrew/cask
       - homebrew/cask-versions
@@ -37,7 +42,7 @@
       - kubectl
       - helm
       - awscli
-      - jsonnet
+      - go-jsonnet
     brew_absent_packages: []
     brew_present_casks: []
     brew_absent_casks: []
