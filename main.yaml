@@ -17,6 +17,7 @@
       - homebrew/cask-versions
       - blendle/blendle
       - dtan4/dtan4
+      - xxxbobrxxx/xxxbobrxxx
     brew_absent_taps: []
     brew_present_packages:
       - vault
@@ -43,6 +44,7 @@
       - helm
       - awscli
       - go-jsonnet
+      - ide-gen
     brew_absent_packages: []
     brew_present_casks: []
     brew_absent_casks: []
