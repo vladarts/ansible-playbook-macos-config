@@ -45,6 +45,7 @@
       - awscli
       - go-jsonnet
       - ide-gen
+      - goreleaser
     brew_absent_packages: []
     brew_present_casks: []
     brew_absent_casks: []
