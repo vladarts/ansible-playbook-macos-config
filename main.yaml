@@ -13,11 +13,11 @@
       - name: PixelmatorPro
         id: 1289583905
     brew_present_taps:
-      - homebrew/cask
+#      - homebrew/cask
       - homebrew/cask-versions
       - blendle/blendle
       - dtan4/dtan4
-      - xxxbobrxxx/xxxbobrxxx
+      - vladarts/xxxbobrxxx
     brew_absent_taps: []
     brew_present_packages:
       - vault
