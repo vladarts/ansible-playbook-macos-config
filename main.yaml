@@ -47,7 +47,8 @@
       - ide-gen
       - goreleaser
     brew_absent_packages: []
-    brew_present_casks: []
+    brew_present_casks:
+      - google-cloud-sdk
     brew_absent_casks: []
   tasks:
     - include_tasks: tasks/osx-defaults.yaml
